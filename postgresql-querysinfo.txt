@@ -1,0 +1,72 @@
+\l : this will list all databases
+
+
+create database ems; --> to create  a database
+
+\c ems or \connect ems: to switch to another database
+
+\! cls : clear the screen
+
+
+Basic Data Types to work with postgres
+
+Character Section
+
+char(n) or character(n):Fixed length with blank padded
+varchar(n) or character varying(n):Variable length with limit
+text,varchar:	Variable unlimited length
+
+
+ex:
+create table demo2(col1 char(10),col2 character(10),col3 varchar,col4 text,col5 character varying(10) ,col6 varchar(10));
+
+
+
+
+Boolean Section
+create table demo3(is_status BOOLEAN);
+INSERT INTO  demo3 values(TRUE);
+INSERT INTO  demo3 values(FALSE);
+INSERT INTO  demo3 values('t');
+INSERT INTO  demo3 values('y');
+INSERT INTO  demo3 values('yes');
+INSERT INTO  demo3 values('1');
+INSERT INTO  demo3 values('0');
+INSERT INTO  demo3 values('no');
+
+Number Section:
+create table demo4(age int);
+create table demo5(salary numeric(5,2));
+
+Date & Time:
+CREATE TABLE demo6(invoicedata DATE DEFAULT CURRENT_DATE);
+
+INSERT INTO demo6 values(DATE '2023-10-06');
+Get the current date
+SELECT NOW()::date;
+SELECT CURRENT_DATE;
+
+// Format change
+SELECT TO_CHAR(NOW() :: DATE, 'dd/mm/yyyy');
+// Extra year,month,day
+SELECT invoicedata,
+	EXTRACT (YEAR FROM invoicedata) AS YEAR,
+	EXTRACT (MONTH FROM invoicedata) AS MONTH,
+	EXTRACT (DAY FROM invoicedata) AS DAY
+FROM demo6;
+
+
+// Get the age only using age function
+select invoicedata,AGE(invoicedata) FROM demo6;
+
+// Get the interval using "-" operator
+SELECT invoicedata,now() - invoicedata as diff FROM demo6;
+
+
+
+
+
+
+
+
+
