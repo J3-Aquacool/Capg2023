@@ -1,0 +1,22 @@
+
+
+
+Topics Covered:
+Core Java 8 (Introduction to Java, Declarations, Operators, Flow Control and Access Control)
+Core Java 8 (Object Oriented Programming with Java)
+Core Java 8 (Object Oriented Programming with Java)
+Core Java 8 (Exception Handling
+Core Java 8 (I/O, Formatting, and Parsing & Threads)
+Core Java 8 (Generics and Collections)
+Core Java 8 (Collections)
+Core Java 8 (Lambda Expressions, Stream API)\
+Gradle
+Database PostgreSQL ,JDBC
+Junit
+
+
+Still to cover:
+Mockito
+Introduction to Design Pattern
+Git,Maven,Jenkins,SonarQube
+
