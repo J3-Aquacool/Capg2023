@@ -1,0 +1,74 @@
+
+
+
+1. Create a table user_login
+
+username--pk
+password
+email
+
+
+Tasks:
+
+To All:
+
+1.1 :Insert data in the login table (Atleast 5)
+class name:UserDAO
+String username;
+String password;
+String email;
+
+
+
+1.2 Mamtha,Narmadaha,Pavani,Harika,Raju,Kavya,Aparna,Anusha,Naveen,Padma,Himaja
+
+
+Jdbc App
+1.create a method which will validate username and password,if the user name is valid return true and a message "Valid User"
+boolean userValidation(STring user,String pass);
+
+
+1.3 Rachna,Akshaya,Samyuktha,Vimala,Dharani,Praveen
+1.create a method which will display all display all username which start with letter 'J'
+List listUsersStartsWith(char)
+
+
+1.4  Nisha,Revanth,Dayanad,Murli,Tanmay
+1.create a method which will accept username,password,email and insert inside the table only if it matches the given condition
+username: length should be greater than 4 and less than 10 character
+password :should be  greater than 4 and less then 10 characters  and only 'Characters' no numbers
+
+void addUser(String username,String pass,String email)
+
+
+1.5 Gyaneshwar,Rakshitha,Haneef,Vineeth
+Create a method to update user credential ,like password and email only if the user is existing,if not existing display
+a message "User does not exist"
+
+boolean updateUserCredentials(String username,String password,String email)
+
+1.6 Sharath,Dhanlakshmi,Praveena,Anjali,Nikitha
+
+Create a method to resetPassword ,and perform soft delete operation(ie it should not be deleted from the table)
+the password should be reset 
+a. ensure the password reset is done only if it does not match oldpassword 
+b. delete the user :(soft deletion)
+c. display user details for only existing data(ie soft deletion data should not be viewed)
+
+boolean passwordReset(String username,String password)
+
+boolean deleteUser(String username)
+
+List displayUsers()
+
+
+
+
+
+
+
+
+
+
+
+
